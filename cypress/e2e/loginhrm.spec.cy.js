@@ -1,8 +1,12 @@
+import UserData from '../fixtures/UserData.json'
+
+
+
 describe('Orange HRM Tests', () => {
-  it.skip('Login - Success', () => {
+  it('Login - Success', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    cy.get('[name="username"]').type('Admin')
-    cy.get('[name="password"]').type('admin123')
+    cy.get('[name="username"]').type(UserData.userSuccess.username)
+    cy.get('[name="password"]').type(UserData.userSuccess.password)
     cy.get("[type='submit']").click()
     cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
     cy.get('.oxd-topbar-header-breadcrumb-module').contains('Dashboard')
@@ -24,7 +28,7 @@ describe('Orange HRM Tests', () => {
     /*cy.get('.orangehrm-login-forgot-header').click()
     cy.get('.oxd-text--h6').contains('Reset Password') *///Clica na recureção de senha direciona para pagina de recuperação
   })
-  it('test Link OrangeHRM', ()=>{
+  it.skip('test Link OrangeHRM', ()=>{
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     cy.get("[href='http://www.orangehrm.com']").click().should('have.attr', 'href', 'http://www.orangehrm.com')
    // cy.location('pathname').should('equal', 'https://www.orangehrm.com/')
