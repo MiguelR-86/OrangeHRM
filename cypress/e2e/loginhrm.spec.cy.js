@@ -3,33 +3,24 @@ import LoginPage from '../pages/LoginPage'
 
 describe('Orange HRM Tests', () => {
 
- /* const selectorsList = {
-    userNameField: "[name='username']",
-    passwordField: '[name="password"]',
-    sectionTitleTopBar: ".oxd-topbar-header-breadcrumb-module",
-    wrongCredential: ".oxd-alert"
 
-  }*/
-
-
-  it('Login - Success', () => {
+  it.skip('Login - Success', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    /*cy.get(selectorsList.userNameField).type(UserData.userSuccess.username)
-    cy.get(selectorsList.passwordField).type(UserData.userSuccess.password)*/
+
     LoginPage.elements.userNameField().type(UserData.userSuccess.username)
     LoginPage.elements.passwordField().type(UserData.userSuccess.password)
 
-    cy.get("[type='submit']").click()
+    LoginPage.elements.loginButton().click()
     cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
-    cy.get(selectorsList.sectionTitleTopBar).contains('Dashboard')
+    LoginPage.elements.dashboardGrid().contains('Dashboard')
   })
 
-    it.skip('Login - Fail', () => {
+    it('Login - Fail', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    cy.get(selectorsList.userNameField).type('Admin')
-    cy.get(selectorsList.passwordField).type('falha')//password errado
-    cy.get("[type='submit']").click()
-    cy.get(selectorsList.wrongCredential)
+    LoginPage.elements.userNameField().type(UserData.userFail.username)
+    LoginPage.elements.passwordField().type(UserData.userFail.password)
+    LoginPage.elements.loginButton().click()
+    LoginPage.elements.wrongCredentialAlert()
     
   }) 
     it.skip('Test Button Forgot Password', () => {
