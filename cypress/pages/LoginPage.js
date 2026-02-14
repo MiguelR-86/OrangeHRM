@@ -7,8 +7,9 @@ class LoginPage {
     userNameField: () => cy.get('[name="username"]'),
     passwordField: () => cy.get('[name="password"]'),
     loginButton: () => cy.get('[type="submit"]'),
-    dashboardGrid: () => cy.get('.oxd-topbar-header-breadcrumb-module'),
-    wrongCredentialAlert: () => cy.get('.oxd-alert-content')
+    dashboardTitle: () => cy.get('.oxd-topbar-header-breadcrumb-module'),
+    wrongCredentialAlert: () => cy.get('.oxd-alert-content'),
+    mandatoryCredentialAlert: () => cy.get('.oxd-input-group__message')
   };
 
   // 👉 2) AÇÕES DA PÁGINA (métodos)

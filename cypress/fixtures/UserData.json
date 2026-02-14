@@ -9,6 +9,22 @@
     "username": "userFail",
     "password": "passFail"
 
+  },
+  "userFailUsernameInvalid": {
+    "username": "userFail",
+    "password": "admin123"
+
+  },
+  "userFailPasswordInvalid": {
+    "username": "Admin",
+    "password": "PasswordFail"
+
+  },
+  "userFailCredentialEmpty": {
+    "username": " ",
+    "password": " "
+
   }
+    
 
 }
