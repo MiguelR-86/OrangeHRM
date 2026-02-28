@@ -8,7 +8,7 @@ beforeEach(() => {
 })
 
 
-  it.skip('Login - Success', () => {
+  it('Login - Success', () => {
 
     LoginPage.elements.userNameField().type(UserData.userSuccess.username)
     LoginPage.elements.passwordField().type(UserData.userSuccess.password)
@@ -18,21 +18,21 @@ beforeEach(() => {
     LoginPage.elements.dashboardTitle().contains('Dashboard')
   })
 
-  it.skip('Login - Fail', () => {
+  it('Login - Fail', () => {
     LoginPage.elements.userNameField().type(UserData.userFail.username)
     LoginPage.elements.passwordField().type(UserData.userFail.password)
     LoginPage.elements.loginButton().click()
     LoginPage.elements.wrongCredentialAlert().should('be.visible')
     
   }) 
-  it.skip('Login - UserName Invalid', () => {
+  it('Login - UserName Invalid', () => {
     LoginPage.elements.userNameField().type(UserData.userFailUsernameInvalid.username)
     LoginPage.elements.passwordField().type(UserData.userFailUsernameInvalid.password)
     LoginPage.elements.loginButton().click()
     LoginPage.elements.wrongCredentialAlert().should('be.visible')
     
   }) 
-  it.skip('Login - Password Invalid', () => {
+  it('Login - Password Invalid', () => {
     LoginPage.elements.userNameField().type(UserData.userFailPasswordInvalid.username)
     LoginPage.elements.passwordField().type(UserData.userFailPasswordInvalid.password)
     LoginPage.elements.loginButton().click()
