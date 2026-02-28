@@ -27,7 +27,7 @@ beforeEach(() => {
   }) 
   it('Login - UserName Invalid', () => {
     LoginPage.elements.userNameField().type(UserData.userFailUsernameInvalid.username)
-    LoginPage.elements.passwordField().type(UserData.userFailUsernameInvalid.password)
+    LoginPage.elements.passwordField()(UserData.userFailUsernameInvalid.password)
     LoginPage.elements.loginButton().click()
     LoginPage.elements.wrongCredentialAlert().should('be.visible')
     
