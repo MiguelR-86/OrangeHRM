@@ -1,0 +1,13 @@
+{
+    "personalDetails": {
+        "firstName": "TfirstName",
+        "middleName": "TmiddleName",
+        "lastName": "Tlastname",
+        "employeeId": "TemployeeId",
+        "otherId": "56789",
+        "driverLicenseNumber": "123456789",
+        "licenseExpiryDate": "2033-25-05"
+    }
+
+
+}

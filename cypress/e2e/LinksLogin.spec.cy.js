@@ -1,5 +1,5 @@
-import UserData from '../fixtures/UserData.json'
-import LoginPage from '../pages/LoginPage'
+//import UserData from '../fixtures/UserData.json'
+//import LoginPage from '../pages/LoginPage'
 
 
 describe('Orange HRM Tests Links Login', () => {
