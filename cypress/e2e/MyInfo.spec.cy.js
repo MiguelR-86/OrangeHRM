@@ -11,13 +11,8 @@ beforeEach(() => {
 
   it('Personal Details', () => {
     myInfoPage.clickOnMyInfo()
-   // myInfoPage.writeFirstName()
-
-
-  cy.contains('Employee Id')
-  .parents('.oxd-input-group')
-  .find('input').clear()
-  .type('acertou')
+    myInfoPage.personalDetails(myInfoData.personalDetails)
+   
     
   })
 })
