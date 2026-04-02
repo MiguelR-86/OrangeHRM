@@ -1,13 +1,15 @@
 {
     "personalDetails": {
-        "firstName": "Herzegovinian",
-        "middleName": "Herzegovinian",
+        "firstName": "João",
+        "middleName": "Taz",
         "lastName": "Souza",
         "employeeId": "1020304050",
         "otherId": "5678910",
         "driverLicenseNumber": "123456789",
         "licenseExpiryDate": "2033-25-05",
-        "Nationality": "Herzegovinian"
+        "nationality": "Comoran",
+        "marital": "Single",
+        "dateOfBirth": "1980-10-12"
     }
 
 

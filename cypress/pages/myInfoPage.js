@@ -6,7 +6,10 @@ class MyInfopage{
         middleName:() => cy.get("[name='middleName']"),
         lastName: () => cy.get("[name='lastName']"),
         genericGridItem: () => '.oxd-grid-item',
-        nationalityItem: () => '.oxd-select-text-input'
+        optionSelect: () => '.oxd-select-dropdown',
+        gender: () => '.oxd-radio-wrapper',
+        closeButton: () => '.--close',
+        submitButton: () => "[type='submit']"
 
 
     };
@@ -21,15 +24,20 @@ personalDetails(userData){
     this.elements.lastName().clear().type(userData.lastName)
     cy.contains('Other Id').parents(this.elements.genericGridItem()).find('input').clear().type(userData.otherId)
     cy.contains("Driver's License Number").parents(this.elements.genericGridItem()).clear().type(userData.driverLicenseNumber)
-    cy.contains('License Expiry Date').parents(this.elements.genericGridItem()).clear().type(userData.licenseExpiryDate).click()
+    cy.contains('License Expiry Date').parents(this.elements.genericGridItem()).clear().type(userData.licenseExpiryDate)
+    cy.get(this.elements.closeButton()).click()
     cy.contains('Employee Id').parents(this.elements.genericGridItem()).find('input').clear().type(userData.employeeId)
     cy.contains('Nationality').parents(this.elements.genericGridItem()).click()
-    cy.contains(userData.Nationality).click()
-    
+    cy.get(this.elements.optionSelect()).contains(userData.nationality).click()
+    cy.contains('Marital Status').parents(this.elements.genericGridItem()).click()
+    cy.get(this.elements.optionSelect()).contains(userData.marital).click()
+    cy.contains("Date of Birth").parents(this.elements.genericGridItem()).find('input').clear().type(userData.dateOfBirth)
+    cy.get(this.elements.closeButton()).click()
+    cy.get(this.elements.gender()).eq(0).click()
+    cy.get(this.elements.submitButton()).eq(0).click()
    
    
     
-
 }
 
 }
