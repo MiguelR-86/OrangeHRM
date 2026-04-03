@@ -7,7 +7,7 @@ module.exports = defineConfig({
     },
 
     baseUrl: 'https://opensource-demo.orangehrmlive.com/web/index.php',
-    defaultCommandTimeout: 8000,
+    defaultCommandTimeout: 15000,
     viewportWidth: 1280,
     viewportHeight: 720,
     retries: {
