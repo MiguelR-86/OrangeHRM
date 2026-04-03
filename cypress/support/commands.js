@@ -1,5 +1,5 @@
 import LoginPage from "../pages/LoginPage"
-import UserData from '../fixtures/UserData.json'
+import UserData from '../fixtures/userData.json'
 
 Cypress.Commands.add('login', () => {
   cy.visit('/auth/login')
