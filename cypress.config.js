@@ -8,8 +8,8 @@ module.exports = defineConfig({
 
     baseUrl: 'https://opensource-demo.orangehrmlive.com/web/index.php',
     defaultCommandTimeout: 8000,
-    viewportWidth: 1280,
-    viewportHeight: 720,
+    viewportWidth: 1366, //ou 1280
+    viewportHeight: 768, //ou 720
     retries: {
       runMode: 2,
       openMode: 0

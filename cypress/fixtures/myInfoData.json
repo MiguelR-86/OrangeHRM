@@ -1,15 +1,20 @@
 {
     "personalDetails": {
-        "firstName": "João",
-        "middleName": "Taz",
+        "firstName": "Marc",
+        "middleName": "Alen",
         "lastName": "Souza",
+        "nickName": "MAS",
         "employeeId": "1020304050",
         "otherId": "5678910",
         "driverLicenseNumber": "123456789",
-        "licenseExpiryDate": "2033-25-05",
+        "licenseExpiryDate": "2033-05-25",
         "nationality": "Comoran",
         "marital": "Single",
-        "dateOfBirth": "1980-10-12"
+        "dateOfBirth": "1980-10-12",
+        "genderData": "Male",
+        "bloodType": "AB-",
+        "serviceNumber": "TB54918595",
+        "TestField": "Force2"
     }
 
 
