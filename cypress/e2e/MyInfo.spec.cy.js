@@ -17,7 +17,6 @@ beforeEach(() => {
       myInfoData.personalDetails.firstName,
       myInfoData.personalDetails.middleName,
       myInfoData.personalDetails.lastName,
-    //  myInfoData.personalDetails.nickName
     )
 
     myInfoPage.fillEmployeeDetails(

@@ -15,8 +15,7 @@ beforeEach(() => {
 
     LoginPage.elements.loginButton().click()
     LoginPage.elements.dashboardGrid()
-    //cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
-    //LoginPage.elements.dashboardTitle().contains('Dashboard')
+
   })
 
   it('Login - Fail', () => {

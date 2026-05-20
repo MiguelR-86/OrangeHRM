@@ -60,10 +60,7 @@ validateToastMessage(expectedMessage) {
       .and('contain', expectedMessage)
 }
 
-/*clickSubmit(){
-    cy.get(this.elements.submitButton()).first().click()
 
-}*/
 clickSubmit(sectionTitle = null) {
     if (sectionTitle) {        
         cy.contains(sectionTitle)           
